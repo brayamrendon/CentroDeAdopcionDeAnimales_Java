@@ -1,25 +1,25 @@
 // Clase para registro de animales
 public class Animal {
     //Atributos de los animales
-    String name;
-    int age;
-    String species;
-    String race;
-    String estadoSalud;
-    String descripcion;
+    private String name;
+    private int age;
+    private String species;
+    private String race;
+    private String healthStatus;
+    private String description;
 
     //Creacion de un constructor vacio y constructor con parametros definidos.
 
-    public Animal() {
+    public Animal(String name, int age, String race, String healthStatus, String description) {
     }
 
-    public Animal(String name, int age, String species, String race, String estadoSalud, String descripcion) {
+    public Animal(String name, int age, String species, String race, String healthStatus, String description) {
         this.name = name;
         this.age = age;
         this.species = species;
         this.race = race;
-        this.estadoSalud = estadoSalud;
-        this.descripcion = descripcion;
+        this.healthStatus = healthStatus;
+        this.description = description;
     }
 
     // Creacion de los metodos  Getters y setters de esta clase
@@ -58,18 +58,29 @@ public class Animal {
     }
 
     public String getEstadoSalud() {
-        return estadoSalud;
+        return healthStatus;
     }
 
     public void setEstadoSalud(String estadoSalud) {
-        this.estadoSalud = estadoSalud;
+        this.healthStatus = estadoSalud;
     }
 
     public String getDescripcion() {
-        return descripcion;
+        return description;
     }
 
     public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+        this.description = descripcion;
+    }
+
+    // Método para imprimir la información del animal
+    public void imprimirInformacion() {
+        System.out.println("Nombre: " + name);
+        System.out.println("Edad: " + age);
+        System.out.println("Especie: " + species);
+        System.out.println("Raza: " + race);
+        System.out.println("Estado de Salud: " + healthStatus);
+        System.out.println("Descripción: " + description);
     }
 }
+
